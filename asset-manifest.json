@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bookstore-react-redux/static/css/main.1cafa257.css",
+    "main.js": "/bookstore-react-redux/static/js/main.ee4945e1.js",
+    "index.html": "/bookstore-react-redux/index.html",
+    "main.1cafa257.css.map": "/bookstore-react-redux/static/css/main.1cafa257.css.map",
+    "main.ee4945e1.js.map": "/bookstore-react-redux/static/js/main.ee4945e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cafa257.css",
+    "static/js/main.ee4945e1.js"
+  ]
+}
