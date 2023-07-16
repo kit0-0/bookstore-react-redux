@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🧮 math-magicians</h1>
+  <h1>📚 bookstore-react-redux</h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -27,9 +27,7 @@
 
 # 📖 About the Project <a name="about-project"></a>
 
-**math-magicians** is a web application designed for mathematics enthusiasts. It is a Single Page App (SPA) that provides users with the ability to perform simple calculations and discover random math-related quotes.
-
-The purpose of the project is to create an intuitive and user-friendly calculator application that allows users to perform basic calculations on any device with an internet connection. Additionally, the application provides inspirational and thought-provoking math-related quotes to inspire users.
+**bookstore-react-redux** is a web application that allows users to manage a list of books. It provides functionality to display a list of books, add new books, and remove selected books.
 
 ## 🛠️ Built With <a name="built-with"></a>
 
@@ -38,9 +36,11 @@ The purpose of the project is to create an intuitive and user-friendly calculato
 <details>
   <summary>🖥️ Client</summary>
   <ul>
-    <li><a href="https://www.w3schools.com/REACT/">React</a></li>
-    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
-    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+    <li><a href="https://reactjs.org/">React</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://reactrouter.com/">React Router</a></li>
+    <li><a href="https://axios-http.com/">Axios</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
   </ul>
 </details>
 
@@ -49,9 +49,11 @@ The purpose of the project is to create an intuitive and user-friendly calculato
 
 ### 🔑 Key Features <a name="key-features"></a>
 
-- ✨ **Simple Calculations**: Users can make basic calculations such as addition, subtraction, multiplication, and division. The application provides an intuitive user interface where users can input numbers and operators to perform the desired calculations.
+- Display a list of books: The application allows users to view a list of books currently in the bookstore. Each book is displayed with its title, author, and other relevant information.
 
-- 🏅 **Random Math Quotes**: The application offers a collection of inspirational and thought-provoking math-related quotes. Users can read a randomly generated quote by simply refreshing the page or clicking a dedicated button.
+- Add a book: Users can add new books to the bookstore by providing the book's title, author, and any other required details. The new book will be added to the existing list of books.
+
+- Remove a selected book: Users can select a book from the list and remove it from the bookstore. This action permanently deletes the book from the system.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -59,7 +61,7 @@ The purpose of the project is to create an intuitive and user-friendly calculato
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [🔗 Live Demo Link](https://kit0-0.github.io/math-magicians/)
+- [🔗 Live Demo Link](https://kit0-0.github.io/bookstore-react-redux/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,7 +82,7 @@ To run this project, you need the following:
 Clone this repository to your desired folder:
 
 ```bash
-git clone https://github.com/kit0-0/math-magicians.git
+git clone https://github.com/kit0-0/bookstore-react-redux.git
 ```
 
 ### Install
@@ -95,13 +97,9 @@ npm install
 
 To run tests, use the following commands:
 
-- To track CSS linter errors, run:
+- To track CSS and JavaScript linter errors, run:
 ```bash
-npx stylelint "**/*.{css,scss}"
-```
-- To track JavaScript linter errors, run:
-```bash
-npx eslint "**/*.{js,jsx}"
+npm run lint
 ```
 
 ### Build
@@ -138,23 +136,21 @@ npm start
 
 - [ ] 📱 **Add Animation**: Enhance the user interface with smooth animations and transitions to make the user experience more engaging and interactive.
 
-- [ ] 📝 **Add Model**: Implement a mathematical model or algorithm to perform advanced calculations, such as trigonometric functions or logarithms, providing users with a wider range of mathematical operations.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions to Math Magicians are welcome! If you would like to contribute, please follow these guidelines:
+Contributions are welcome! If you want to contribute to the project, follow these steps:
 
-1. Fork the repository and create a new branch for your contribution.
-2. Make your changes and ensure that the code is properly formatted.
-3. Write clear and concise commit messages.
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
 4. Push your branch to your forked repository.
-5. Submit a pull request detailing the changes you've made.
+5. Open a pull request.
 
-Feel free to check the [issues page](https://github.com/kit0-0/math-magicians/issues).
+Feel free to check the [issues page](https://github.com/kit0-0/bookstore-react-redux/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
