@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
+import './Book.css';
 
 const Book = ({ title, author }) => (
   <div className="book-container p-4 border">
@@ -27,14 +28,6 @@ const Book = ({ title, author }) => (
               <div className="graphic-progress d-flex align-items-center gap-1 mr-2">
                 <div
                   className="circular-progress"
-                  style={{
-                    borderRadius: '50%',
-                    width: '4.25rem',
-                    height: '4.25rem',
-                    border: '5px solid #307bbe',
-                    borderLeftColor: '#e8e8e8',
-                    transform: 'rotate(45deg)',
-                  }}
                 />
                 <div className="progress-number d-flex flex-column align-items-center justify-content-center">
                   <span>64%</span>
