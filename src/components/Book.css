@@ -1,0 +1,8 @@
+.circular-progress {
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  transform: rotate(45deg);
+}
