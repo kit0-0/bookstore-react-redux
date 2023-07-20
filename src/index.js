@@ -5,11 +5,13 @@ import store from './redux/store';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(
   <Provider store={store}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
   </Provider>,
-  document.getElementById('root'),
 );
