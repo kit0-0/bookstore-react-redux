@@ -1,17 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
-import Book from '../components/Book';
+import { useDispatch } from 'react-redux';
+import BookList from '../components/BookList';
 import AddBook from '../components/AddBook';
-import { addBook, removeBook } from '../redux/books/booksSlice';
+import { addBook } from '../redux/books/booksSlice';
 
 const BooksContainer = () => {
-  const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
-
-  const handleRemoveBook = (itemId) => {
-    dispatch(removeBook(itemId));
-  };
 
   const handleAddBook = (newBook) => {
     dispatch(addBook(newBook));
@@ -19,16 +14,7 @@ const BooksContainer = () => {
 
   return (
     <Container className="bg-light m-3 p-3">
-      {books.map((book) => (
-        <div className="mb-3" key={book.item_id}>
-          <Book
-            category={book.category}
-            title={book.title}
-            author={book.author}
-            onRemove={() => handleRemoveBook(book.item_id)}
-          />
-        </div>
-      ))}
+      <BookList />
       <hr />
       <AddBook onAdd={handleAddBook} />
     </Container>
