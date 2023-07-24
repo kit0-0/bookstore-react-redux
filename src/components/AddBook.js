@@ -1,36 +1,38 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import PropTypes from 'prop-types';
 import {
   Form, Button, Row, Col,
 } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { addBook, fetchBooks } from '../redux/books/booksSlice';
 
-const AddBook = ({ onAdd }) => {
+const AddBook = () => {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleAddBook = () => {
+  const handleAddBook = async () => {
     if (!title || !author || !category) {
-      alert('Please fill in all the fields before adding the book.');
+      setErrorMessage('Please fill in all the fields before adding the book.');
       return;
     }
 
-    const newBook = {
-      item_id: uuidv4(),
-      title,
-      author,
-      category,
-    };
-
-    onAdd(newBook);
-    setTitle('');
-    setAuthor('');
-    setCategory('');
+    try {
+      await dispatch(addBook({ title, author, category }));
+      setTitle('');
+      setAuthor('');
+      setCategory('');
+      setErrorMessage('');
+      await dispatch(fetchBooks());
+    } catch (error) {
+      setErrorMessage('Error adding book. Please try again later.');
+    }
   };
 
   return (
     <Form className="add-form">
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <h3>ADD NEW BOOK</h3>
       <Row className="align-items-center">
         <Col md={4}>
@@ -65,10 +67,6 @@ const AddBook = ({ onAdd }) => {
       </Row>
     </Form>
   );
-};
-
-AddBook.propTypes = {
-  onAdd: PropTypes.func.isRequired,
 };
 
 export default AddBook;
