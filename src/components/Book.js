@@ -19,7 +19,7 @@ const Book = ({
                   <span className="text-primary">{author}</span>
                 </div>
                 <div className="book-buttons-container mt-3">
-                  <Button variant="light  text-primary">Comments</Button>
+                  <Button variant="light ps-0 text-primary">Comments</Button>
                   <span className="mx-1">|</span>
                   <Button variant="light text-primary" onClick={() => onRemove(item_id)}>
                     Remove
