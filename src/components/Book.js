@@ -11,15 +11,15 @@ const Book = ({
       <ul className="list-unstyled">
         <li>
           <div>
-            <div className="book-data d-flex justify-content-between">
+            <div className="book-data d-flex align-items-center justify-content-between ">
               <div className="book-details">
                 <div className="d-flex flex-column">
-                  <span>{category}</span>
-                  <span>{title}</span>
+                  <span className="fw-bold gray">{category}</span>
+                  <span className="fw-bold title">{title}</span>
                   <span className="text-primary">{author}</span>
                 </div>
                 <div className="book-buttons-container mt-3">
-                  <Button variant="light text-primary">Comments</Button>
+                  <Button variant="light  text-primary">Comments</Button>
                   <span className="mx-1">|</span>
                   <Button variant="light text-primary" onClick={() => onRemove(item_id)}>
                     Remove
@@ -29,18 +29,18 @@ const Book = ({
                 </div>
               </div>
 
-              <div className="graphic-progress d-flex align-items-center gap-1 mr-2">
+              <div className="graphic-progress d-flex align-items-center gap-1">
                 <div className="circular-progress" />
                 <div className="progress-number d-flex flex-column align-items-center justify-content-center">
                   <span>64%</span>
-                  <span>Completed</span>
+                  <span className="gray">Completed</span>
                 </div>
               </div>
               <div className="vr" />
-              <div className="current-chapter d-flex flex-column justify-content-center align-items-center">
-                <span>Current Chapter</span>
+              <div className="current-chapter d-flex flex-column justify-content-center gap-1">
+                <span className="gray">Current Chapter</span>
                 <span>Chapter 17</span>
-                <Button variant="btn btn-primary">Update progress</Button>
+                <Button variant="btn btn-primary mt-2">Update progress</Button>
               </div>
             </div>
           </div>
