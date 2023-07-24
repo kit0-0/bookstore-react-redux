@@ -4,10 +4,10 @@ import { User } from 'react-feather';
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="container">
+    <div className="container ">
       <h1 className="text-primary">Bookstore CMS</h1>
       <div className="collapse navbar-collapse">
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ms-3">
           <li className="nav-item">
             <NavLink exact to="/" className="nav-link" activeclassname="active">BOOKS</NavLink>
           </li>

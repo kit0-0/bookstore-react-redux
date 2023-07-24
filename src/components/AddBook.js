@@ -33,7 +33,7 @@ const AddBook = () => {
   return (
     <Form className="add-form">
       <h3>ADD NEW BOOK</h3>
-      <Row className="align-items-center">
+      <Row className="align-items-center flex">
         <Col md={4}>
           <Form.Control
             type="text"
@@ -42,7 +42,7 @@ const AddBook = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </Col>
-        <Col md={4}>
+        <Col md={3}>
           <Form.Control
             type="text"
             placeholder="Book Author"
@@ -50,7 +50,7 @@ const AddBook = () => {
             onChange={(e) => setAuthor(e.target.value)}
           />
         </Col>
-        <Col md={4}>
+        <Col md={3}>
           <Form.Control
             type="text"
             placeholder="Book Category"
@@ -58,13 +58,13 @@ const AddBook = () => {
             onChange={(e) => setCategory(e.target.value)}
           />
         </Col>
-        {errorMessage && <div className="text-danger error-message">{errorMessage}</div>}
-        <Col md={4}>
-          <Button variant="primary mt-4" size="lg" block onClick={handleAddBook}>
+        <Col md={2}>
+          <Button variant="primary px-4" block onClick={handleAddBook}>
             Add Book
           </Button>
         </Col>
       </Row>
+      {errorMessage && <div className="text-danger error-message">{errorMessage}</div>}
     </Form>
   );
 };
