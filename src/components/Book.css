@@ -6,3 +6,10 @@
   border-left-color: #e8e8e8;
   transform: rotate(45deg);
 }
+.title{
+  font-size: 1.375rem;
+}
+
+.gray{
+  color: #a6a1a165;
+}
