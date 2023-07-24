@@ -59,7 +59,7 @@ const AddBook = () => {
           />
         </Col>
         <Col md={2}>
-          <Button variant="primary" block onClick={handleAddBook}>
+          <Button variant="primary px-4" block onClick={handleAddBook}>
             Add Book
           </Button>
         </Col>
