@@ -9,10 +9,10 @@ const Navbar = () => (
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <NavLink exact to="/" className="nav-link" activeClassName="active">BOOKS</NavLink>
+            <NavLink exact to="/" className="nav-link" activeclassname="active">BOOKS</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/categories" className="nav-link" activeClassName="active">CATEGORIES</NavLink>
+            <NavLink to="/categories" className="nav-link" activeclassname="active">CATEGORIES</NavLink>
           </li>
         </ul>
       </div>

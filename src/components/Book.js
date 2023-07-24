@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import './Book.css';
 
-const Book = ({ title, author }) => (
+const Book = ({
+  title, author, category, onRemove,
+}) => (
   <div className="book-container p-4 border">
     <div>
       <ul className="list-unstyled">
@@ -12,14 +14,14 @@ const Book = ({ title, author }) => (
             <div className="book-data d-flex justify-content-between">
               <div className="book-details">
                 <div className="d-flex flex-column">
-                  <span>Action</span>
+                  <span>{category}</span>
                   <span>{title}</span>
                   <span className="text-primary">{author}</span>
                 </div>
                 <div className="book-buttons-container mt-3">
-                  <Button variant="light  text-primary">Comments</Button>
+                  <Button variant="light text-primary">Comments</Button>
                   <span className="mx-1">|</span>
-                  <Button variant="light text-primary">Remove</Button>
+                  <Button variant="light text-primary" onClick={onRemove}>Remove</Button>
                   <span className="mx-1">|</span>
                   <Button variant="light text-primary">Edit</Button>
                 </div>
@@ -51,6 +53,8 @@ const Book = ({ title, author }) => (
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default Book;
