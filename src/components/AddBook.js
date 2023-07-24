@@ -32,7 +32,6 @@ const AddBook = () => {
 
   return (
     <Form className="add-form">
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <h3>ADD NEW BOOK</h3>
       <Row className="align-items-center">
         <Col md={4}>
@@ -59,6 +58,7 @@ const AddBook = () => {
             onChange={(e) => setCategory(e.target.value)}
           />
         </Col>
+        {errorMessage && <div className="text-danger error-message">{errorMessage}</div>}
         <Col md={4}>
           <Button variant="primary mt-4" size="lg" block onClick={handleAddBook}>
             Add Book

@@ -16,8 +16,9 @@ const BookList = () => {
     try {
       await dispatch(removeBook(item_id));
       dispatch(fetchBooks());
+      return item_id;
     } catch (error) {
-      console.error('Error removing book:', error);
+      return error;
     }
   };
 

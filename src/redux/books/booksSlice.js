@@ -12,7 +12,6 @@ const initialState = {
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   try {
     const response = await axios.get(baseURL);
-    console.log('Fetch response:', response.data);
     return response.data;
   } catch (error) {
     throw new Error('Failed to fetch books');
